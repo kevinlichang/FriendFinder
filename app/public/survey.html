@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Survey</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Answer these Questions!</h1>
+    <hr>
+    <h4 class="mt-5"><strong>Question 1</strong></h4>
+    <h5>You like to make plans to go outdoors often</h5>
+    <select class="choices-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4 class="mt-5"><strong>Question 2</strong></h4>
+    <h5>You find it easy to stay relaxed, even when there is some pressure</h5>
+    <select class="choices-select" id="q2">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h4 class="mt-5"><strong>Question 3</strong></h4>
+    <h5>You rarely start doing something without a plan first</h5>
+    <select class="choices-select" id="q3">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    
+    <h4 class="mt-5"><strong>Question 4</strong></h4>
+    <h5>You highly value first impressions</h5>
+    <select class="choices-select" id="q4">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+        
+    <h4 class="mt-5"><strong>Question 5</strong></h4>
+    <h5>The truth is more important as opposed to lying in order to avoid hurting someone's feelings</h5>
+    <select class="choices-select" id="q5">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+        
+    <h4 class="mt-5"><strong>Question 6</strong></h4>
+    <h5>You feel more energized after spending time with a group of people</h5>
+    <select class="choices-select" id="q6">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+        
+    <h4 class="mt-5"><strong>Question 7</strong></h4>
+    <h5>People can rarely upset you</h5>
+    <select class="choices-select" id="q7">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+        
+    <h4 class="mt-5"><strong>Question 8</strong></h4>
+    <h5>It's important to have interesting hobbies</h5>
+    <select class="choices-select" id="q8">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+        
+    <h4 class="mt-5"><strong>Question 9</strong></h4>
+    <h5>It's easy to relate to other people's feelings</h5>
+    <select class="choices-select" id="q9">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+        
+    <h4 class="mt-5"><strong>Question 10</strong></h4>
+    <h5>You find yourself daydreaming often</h5>
+    <select class="choices-select" id="q10">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <hr>
+
+    <h5>Name (Required)</h5>
+    <input id="name" class="form-control" required type="text">
+    <h5>Link to Photo (Required)</h5>
+    <input id="photo" class="form-control" required type="text">
+
+    <input type="submit" class="btn btn-outline-primary btn-lg m-3" id="submit" value="submit">
+
+
+
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
