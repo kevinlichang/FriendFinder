@@ -17,7 +17,7 @@
     <hr>
     <h4 class="mt-5"><strong>Question 1</strong></h4>
     <h5>You like to make plans to go outdoors often</h5>
-    <select class="choices-select" id="q1">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q1">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -28,7 +28,7 @@
 
     <h4 class="mt-5"><strong>Question 2</strong></h4>
     <h5>You find it easy to stay relaxed, even when there is some pressure</h5>
-    <select class="choices-select" id="q2">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q2">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -39,7 +39,7 @@
 
     <h4 class="mt-5"><strong>Question 3</strong></h4>
     <h5>You rarely start doing something without a plan first</h5>
-    <select class="choices-select" id="q3">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q3">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -50,7 +50,7 @@
 
     <h4 class="mt-5"><strong>Question 4</strong></h4>
     <h5>You highly value first impressions</h5>
-    <select class="choices-select" id="q4">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q4">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -61,7 +61,7 @@
 
     <h4 class="mt-5"><strong>Question 5</strong></h4>
     <h5>The truth is more important as opposed to lying in order to avoid hurting someone's feelings</h5>
-    <select class="choices-select" id="q5">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q5">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -72,7 +72,7 @@
 
     <h4 class="mt-5"><strong>Question 6</strong></h4>
     <h5>You feel more energized after spending time with a group of people</h5>
-    <select class="choices-select" id="q6">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q6">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -83,7 +83,7 @@
 
     <h4 class="mt-5"><strong>Question 7</strong></h4>
     <h5>People can rarely upset you</h5>
-    <select class="choices-select" id="q7">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q7">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -94,7 +94,7 @@
 
     <h4 class="mt-5"><strong>Question 8</strong></h4>
     <h5>It's important to have interesting hobbies</h5>
-    <select class="choices-select" id="q8">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q8">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -105,7 +105,7 @@
 
     <h4 class="mt-5"><strong>Question 9</strong></h4>
     <h5>It's easy to relate to other people's feelings</h5>
-    <select class="choices-select" id="q9">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q9">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -116,7 +116,7 @@
 
     <h4 class="mt-5"><strong>Question 10</strong></h4>
     <h5>You find yourself daydreaming often</h5>
-    <select class="choices-select" id="q10">
+    <select class="choices-select custom-select" style="width: 18rem;" id="q10">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -174,7 +174,27 @@
     $("#submit").on("click", function (event) {
       event.preventDefault();
 
+      const answersCheck = () => {
+        let allFilled = true;
+        $(".form-control").each(function () {
+          if ($(this).val().trim() == "") {
+            allFilled = false;
+          }
+        });
 
+        $(".choices-select").each(function () {
+
+          if ($(this).val() == "") {
+            allFilled = false;
+          }
+        });
+        return allFilled;
+      }
+
+      if (!answersCheck()) {
+        alert("Please fill out everything!");
+        return false;
+      }
 
       const newFriend = {
         name: $("#name").val().trim(),
