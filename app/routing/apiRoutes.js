@@ -26,7 +26,6 @@ module.exports = function(app) {
         scoreDiffArr.push(scoreDiff);
       }; 
 
-
       // add all the scoreDiffArr elements together for total Difference
       const sum = scoreDiffArr.reduce((a, b) => a + b, 0);
 
@@ -40,6 +39,7 @@ module.exports = function(app) {
     friendsData.push(newFriend);
 
     res.json(match);
+    
   });
 
 
